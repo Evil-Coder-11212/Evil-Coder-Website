@@ -1,0 +1,117 @@
+/* Navbar */
+@media screen and (max-width: 640px) {
+  header {
+    position: absolute;
+    z-index: 5;
+    background-color: white;
+    width: 100vw;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  nav {
+    position: absolute;
+    height: 200px;
+    background-color: white;
+    width: 100%;
+    top: 45px;
+    right: 0;
+    transform: translateY(-130%);
+    transition: var(--transition);
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav > ul > li {
+    margin: 0;
+    border-bottom: 4px solid black;
+    padding-left: 20px;
+    transition: var(--transition);
+  }
+
+  /* NTH CHILDE HERE */
+
+  header > nav > ul > li:nth-child(3) {
+    font-weight: 100;
+  }
+
+  nav > ul > li:last-child {
+    border-bottom: none;
+  }
+
+  .main-header > nav > ul > li:last-child:hover {
+    border-bottom: none;
+  }
+
+  /* Animations   z */
+
+  .main-header > nav > ul > li:hover {
+    padding-left: 40px;
+  }
+
+  /* Making the nav bar coming down from -130% to 0% */
+
+  .active {
+    transform: translateY(0%);
+  }
+
+  /* TO make the burger x and smooth  */
+  .open-menu > .line:nth-child(1) {
+    transition: var(--transition);
+    transform: translate(0%, 15px) rotate(-45deg);
+  }
+
+  .open-menu > .line:nth-child(3) {
+    transition: var(--transition);
+    transform: translate(0%, -10px) rotate(45deg);
+  }
+
+  .open-menu > .line:nth-child(2) {
+    transition: var(--transition);
+    opacity: 0;
+  }
+}
+
+/* About Me Responsiveness */
+@media screen and (max-width: 1090px) {
+  .sections-container {
+    flex-wrap: wrap;
+  }
+
+  .sections {
+    width: 100%;
+    margin: 20px 20px;
+  }
+}
+
+@media screen and (max-width: 363px) {
+  .sections {
+    margin: 20px 10px;
+  }
+
+  .sections:nth-child(2) {
+    margin: 20px 10px;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .content > p {
+    text-align: center;
+    padding: 5px;
+  }
+
+  /* Animations */
+  .nav-img-container > img:hover {
+    transform: scale(1.1);
+  }
+}

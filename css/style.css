@@ -1,0 +1,477 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
+/* Note: All Animation are at line number 288 to be organize */
+
+:root {
+  --secondary-color: rgb(255, 255, 255);
+  --bg-primary: rgb(26, 26, 26);
+  font-family: Nunito, sans-serif;
+  font-size: 16px;
+  --transition: transform ease-in-out 0.3s 0s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--secondary-color);
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+/* Navbar */
+header {
+  background-color: var(--bg-secondary);
+  height: 45px;
+  width: 100vw;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > nav {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > a {
+  color: var(--bg-primary);
+  font-weight: bold;
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+}
+
+nav > ul > li {
+  padding: 12px 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+header > nav > ul > li > a {
+  color: black;
+}
+
+/* This will be replace by an image */
+.img-container {
+  background-color: red;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+/* burger */
+.burger {
+  padding: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger > .line {
+  background-color: black;
+  width: 40px;
+  height: 2px;
+  transition: var(--transition);
+  margin: 5px 0;
+}
+
+.burger {
+  display: none;
+}
+
+/* Header Ends */
+
+/* Home Page */
+.title {
+  margin-top: 10px;
+}
+
+.main-content {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: column;
+}
+
+.details-content {
+  z-index: 0;
+  width: 100%;
+  height: 525px;
+  background: var(--bg-primary);
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  margin-left: 10%;
+  height: 200px;
+  width: 350px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  transition: var(--transition);
+  flex-direction: column;
+}
+
+.content > p {
+  font-weight: bold;
+}
+
+.content > a > button {
+  width: 130px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.nav-img-container {
+  display: none;
+}
+
+/* Home Page Ends */
+
+/* About Me */
+.about-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+}
+
+.title-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  color: var(--primary-color);
+}
+
+.sections-container {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.sections {
+  width: 310px;
+  margin: 0 0 0 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: rgb(0 0 0) 2px 2px 3px 0px inset,
+    rgb(48 48 48 / 50%) -2px -2px 3px 1px inset;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.introduction-text {
+  margin-top: 10px;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  color: rgb(174, 174, 174);
+  font-weight: bold;
+}
+
+.row-item {
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  background-color: var(--bg-primary);
+}
+
+.row-item > a {
+  color: var(--primary-color);
+}
+
+.items {
+  color: var(--secondary-color);
+  width: 210px;
+  border-radius: 10px;
+  box-shadow: rgb(0 0 0) 1px 1px 3px 0px inset,
+    rgb(48 48 48 / 50%) -1px -1px 3px 1px inset;
+  margin: 20px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s 0s;
+}
+
+/* Delete after img comes */
+.items > .img-test {
+  width: 100%;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-test > img {
+  width: 100px;
+  color: var(--secondary-color);
+}
+
+/* Delete after img comes */
+.test-text {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.details-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.details-item-container > p {
+  text-align: center;
+  font-weight: bold;
+  padding: 7px;
+}
+/* ABout Ends Here */
+
+/* COntact Me STart form here */
+.contact-container {
+  background-color: var(--bg-primary);
+  clip-path: ellipse(90% 100% at 48% 0%);
+  /* 20 padding from 20 should be here but because of 5 in all u have added 15 */
+  padding-top: 15px;
+  padding: 5px;
+  width: 100vw;
+  margin-bottom: 15px;
+}
+
+.title-container > h3 {
+  margin: 20px 0;
+  padding: 5px;
+  text-align: center;
+}
+
+.media-container {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.media-items {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgb(0 0 0) 1px 1px 3px 0px inset,
+    rgb(48 48 48 / 50%) -1px -1px 3px 1px inset;
+  border-radius: 15px;
+  margin: 40px;
+  width: 130px;
+  height: 160px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.media-items > p {
+  margin: 10px 0;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Footer */
+.main-footer {
+  width: 100vw;
+}
+
+.footer-container {
+  background-color: var(--bg-primary);
+  padding: 5px;
+}
+
+.footer-items-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-items {
+  box-shadow: rgb(0 0 0) 1px 1px 3px 0px inset,
+    rgb(48 48 48 / 50%) -1px -1px 3px 1px inset;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  margin: 20px 50px;
+  width: 170px;
+  height: 200px;
+  border-radius: 10px;
+  transition: var(--transition);
+  background-color: var(--bg-primary);
+  cursor: pointer;
+}
+
+.footer-title-container {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.footer-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--bg-secondary);
+}
+
+.footer-items > ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.footer-items > ul > li {
+  margin: 3px 0;
+}
+
+.copyright-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-top: 2px solid var(--secondary-color);
+}
+
+.copyright-container > p {
+  margin: 15px 30px 5px 30px;
+  font-weight: bold;
+}
+
+.copyright-container > p > a {
+  font-weight: bold;
+}
+
+/* NTH CHILD HERE */
+body::-webkit-scrollbar {
+  width: 0.25rem;
+  background-color: var(--bg-primary);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+}
+
+.footer-items:nth-child(1) > ul > li:nth-child(3),
+.footer-items:nth-child(1) > ul > li:nth-child(4),
+.footer-items:nth-child(1) > ul > li:nth-child(5) {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.details-item-container > p:nth-child(2) {
+  margin-bottom: 10px;
+}
+
+.sections:nth-child(2) {
+  width: 100%;
+  margin: 0 20px;
+}
+
+/* NTH CHILD ENDS HERE */
+
+/* Id's Here */
+
+/* Id's Ends Here */
+
+/* Animations */
+.main-header > nav > ul > li:hover {
+  height: 45px;
+  border-bottom: solid 4px rgb(255, 33, 33);
+}
+
+.img-container:hover {
+  animation: bigToSmall 0.5s 0s infinite;
+}
+
+.content > a > button:hover {
+  transform: scale(1.1);
+}
+
+.items:hover,
+.media-items:hover,
+.footer-items:hover {
+  transform: translateY(-10px);
+}
+
+/* This animation is for logo */
+@keyframes bigToSmall {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation Ends */
